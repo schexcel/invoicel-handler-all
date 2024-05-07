@@ -1,3 +1,5 @@
+// srv/router/index.js
+
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -35,6 +37,42 @@ const router = createRouter({
       component: ()=>import('@/views/ContactView.vue'),
       meta:{
         title: "Kapcsolat"
+      }
+    },
+    //InvoiceListView
+    {
+      path: '/list',
+      name: 'list',
+      component: ()=>import('@/views/InvoiceListView.vue'),
+      meta:{
+        title: "Számlalista"
+      }
+    },
+    //InvoiceDetailView
+    {
+      path: '/detail',
+      name: 'detail',
+      component: ()=>import('@/views/InvoiceDetailView.vue'),
+      meta:{
+        title: "SzámlalRészletek"
+      }
+    },
+    //InvoiceFormView
+    {
+      path: '/letrehoz',
+      name: 'letrehoz',
+      component: ()=>import('@/views/InvoiceFormView.vue'),
+      meta:{
+        title: "Új Számla létrehozása"
+      }
+    },
+    //TaxpayerFormView
+    {
+      path: '/adozo',
+      name: 'adozo',
+      component: ()=>import('@/views/TaxpayerFormView.vue'),
+      meta:{
+        title: "Új Partner létrehozása"
       }
     }
   ]

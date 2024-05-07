@@ -12,7 +12,8 @@ class InvoiceHeadController extends Controller
      */
     public function index()
     {
-        //
+        $invoiceheads = InvoiceHead::all();  // Itt egyszerűsítés miatt az összes adat lekérése
+        return response()->json($invoiceheads);
     }
 
     /**
