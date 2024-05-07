@@ -1,0 +1,509 @@
+{
+  "id": "0740e152-7116-4a35-aa65-dc9f45fd0d94",
+  "version": "2.0",
+  "name": "Vizsgareme_v1.0",
+  "url": "http://127.0.0.1:8000/invoiceheads",
+  "tests": [{
+    "id": "77043ede-358d-4a35-b76c-9525b7862790",
+    "name": "01_adatbevitel teszt",
+    "commands": [{
+      "id": "5300a91c-46f2-48e9-a81d-8687ab87614c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1605083c-5200-4cd3-bfde-c7ef645f6dfb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1018",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33d7ed43-eebd-4278-8614-eb9290b79fc2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bejelentkezés",
+      "targets": [
+        ["linkText=Bejelentkezés", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Bejelentkezés')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Bejelentkezés')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42161e1b-d024-4c7e-acc0-d13055ce1f79",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25831ff6-c8ef-4346-af65-46e8c1e39870",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "schwarci@gmail.com"
+    }, {
+      "id": "186a0e44-2cac-4f49-8d28-ae0f86fd494d",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f14ce091-bfaa-4276-890f-0cdd6bdc0ad2",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "501d4437-893b-455d-88cb-527e8e0ccd4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Bejelentkezés')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "399512d9-e6b1-4848-ba62-39cfd1de951a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Új Számla létrehozása",
+      "targets": [
+        ["linkText=Új Számla létrehozása", "linkText"],
+        ["css=.nav-item:nth-child(7) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Új Számla létrehozása')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/letrehoz')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Új Számla létrehozása')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56f6375b-4eb3-43dc-a63e-0bd63bbae7ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Új Számla létrehozása",
+      "targets": [
+        ["linkText=Új Számla létrehozása", "linkText"],
+        ["css=.nav-item:nth-child(7) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Új Számla létrehozása')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/letrehoz')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Új Számla létrehozása')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e58b67b-14b9-4c9e-98e0-29bbbac651cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Új Partner létrehozása",
+      "targets": [
+        ["linkText=Új Partner létrehozása", "linkText"],
+        ["css=.nav-item:nth-child(8) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Új Partner létrehozása')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/adozo')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Új Partner létrehozása')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26545f0a-bd1e-496e-8b37-e0286a6b0b71",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=SzámlalRészletek",
+      "targets": [
+        ["linkText=SzámlalRészletek", "linkText"],
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'SzámlalRészletek')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/detail')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'SzámlalRészletek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6eda59a-0bf4-4880-bff8-9b963d42de78",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlalista",
+      "targets": [
+        ["linkText=Számlalista", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlalista')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/list')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlalista')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b67be40b-0651-47f9-8f4d-be03aa00a28a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kapcsolat",
+      "targets": [
+        ["linkText=Kapcsolat", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Kapcsolat')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contact')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kapcsolat')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4460b97-65bb-468f-8554-bace48c2f296",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regisztráció",
+      "targets": [
+        ["linkText=Regisztráció", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Regisztráció')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regisztráció')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e3bc51a-1639-4c39-8c6b-4e524c6974f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "schwarci@gmail.com"
+    }, {
+      "id": "b8192a24-40b8-4378-8d37-b6c6511876be",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "e6116906-d9da-4fa8-a080-a73fb3e604e6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bejelentkezés",
+      "targets": [
+        ["linkText=Bejelentkezés", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Bejelentkezés')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Bejelentkezés')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2dc7271-e84e-4236-9ac8-55b3ced0bcb2",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "schwarci@gmail.com"
+    }, {
+      "id": "6e100963-4663-4351-b7a6-6b5f135c1222",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "f3c0a9c7-7023-435e-934b-195f1f64b1d0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Főoldal",
+      "targets": [
+        ["linkText=Főoldal", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Főoldal')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Főoldal')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d6df406f-d7fe-483c-8d78-f92efbc78b92",
+    "name": "02_fukcionális teszt",
+    "commands": [{
+      "id": "793c252f-711f-49a5-9f71-f3b4c55bfea3",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/invoiceheads",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "daa804fe-fa43-44cc-9f53-c5b53b7cf70b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1340x941",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b41cf9ef-2998-4e78-bc22-4eaef4aa2be1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Részletek",
+      "targets": [
+        ["linkText=Részletek", "linkText"],
+        ["css=tr:nth-child(1) > td > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Részletek')]", "xpath:link"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads/5']", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Részletek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6703b8a9-13c0-4151-8b84-c25d42741a40",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlák",
+      "targets": [
+        ["linkText=Számlák", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlák')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlák')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a350f5c9-2c64-4f5a-97f8-1dc9723cb5ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) a",
+      "targets": [
+        ["css=tr:nth-child(2) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Részletek')])[2]", "xpath:link"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads/6']", "xpath:href"],
+        ["xpath=//tr[2]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a62cc82-829b-447a-93cb-990b44b0d753",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlák",
+      "targets": [
+        ["linkText=Számlák", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlák')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlák')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e561190-17f5-465b-9dc6-d1059c205833",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) a",
+      "targets": [
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Részletek')])[3]", "xpath:link"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads/7']", "xpath:href"],
+        ["xpath=//tr[3]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e60b24e-4d79-4c2c-ad7b-7c33c480f8fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlák",
+      "targets": [
+        ["linkText=Számlák", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlák')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlák')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61777680-e18d-4b16-9f07-3bf9df54fdca",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(38) a",
+      "targets": [
+        ["css=tr:nth-child(38) a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Részletek')])[38]", "xpath:link"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads/49']", "xpath:href"],
+        ["xpath=//tr[38]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8518366-2857-48f3-80a9-8c850803f99e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlák",
+      "targets": [
+        ["linkText=Számlák", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlák')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlák')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf79a520-1007-4481-b3e8-4c7eaafa0b63",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Adózók",
+      "targets": [
+        ["linkText=Adózók", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Adózók')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/taxpayers']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Adózók')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a0333bf-e4f2-4bc5-b6c4-23c395e1aaf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(492) a > .btn",
+      "targets": [
+        ["css=tr:nth-child(492) a > .btn", "css:finder"],
+        ["xpath=(//input[@value='Szerkesztés'])[492]", "xpath:attributes"],
+        ["xpath=//tr[492]/td[4]/div/a/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "955909f6-6fc5-42d7-b005-e1fac1f44427",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Új számla+",
+      "targets": [
+        ["linkText=Új számla+", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Új számla+')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Új számla+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0789a857-3553-4bf1-a8c3-286f90103af0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Új adózó+",
+      "targets": [
+        ["linkText=Új adózó+", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Új adózó+')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/taxpayers/create']", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Új adózó+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11141fc3-744c-4eaa-a40a-119f09cdc3ff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Számlák",
+      "targets": [
+        ["linkText=Számlák", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Számlák')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://127.0.0.1:8000/invoiceheads']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Számlák')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4a452633-a10a-4c27-8ba2-1f0556404e02",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["77043ede-358d-4a35-b76c-9525b7862790"]
+  }],
+  "urls": ["http://localhost:5173/", "http://127.0.0.1:8000/invoiceheads"],
+  "plugins": []
+}
