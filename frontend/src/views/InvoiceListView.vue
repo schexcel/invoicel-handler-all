@@ -1,10 +1,39 @@
+<script>
+import axios from 'axios';
+//import {http} from "@/utils/http.js";
+
+export default {
+  data() {
+    return {
+      invoiceheads: []
+    };
+  },
+  created() {
+    this.fetchInvoiceHeads();
+  },
+  methods: {
+    fetchInvoiceHeads() {
+      axios.get('http://127.0.0.1:8000/api/invoiceheads')
+          .then(response => {
+            this.invoiceheads = response.data.data;
+
+          })
+          .catch(error => {
+            console.error("Error fetching invoice heads:", error);
+          });
+    }
+  }
+};
+</script>
+
+
 <template>
   <div>
     <table class="table">
       <tr>
         <th style="text-align: left; padding: 10px">Számlák nyilvántartása</th>
         <th style="text-align: right; padding: 10px">
-          <router-link to="/invoiceheads/create" style="text-decoration: none">
+          <router-link to="/letrehoz" style="text-decoration: none">
             Új számla hozzáadása+
           </router-link>
         </th>
@@ -21,47 +50,23 @@
       </tr>
       </thead>
       <tbody>
+
       <tr v-for="invoicehead in invoiceheads" :key="invoicehead.id">
-        <td>{{ invoicehead.supplierTP.taxPayerName || 'Hiányzik!' }}</td>
-        <td>{{ invoicehead.customerTP.taxPayerName || 'Hiányzik!' }}</td>
-        <td>{{ invoicehead.invoiceNumber || 'Hiányzik!' }}</td>
-        <td>{{ invoicehead.invoiceIssueDate || 'Hiányzik!' }}</td>
+        <td>{{ invoicehead.supplierTP.taxPayerName}}</td>
+        <td>{{ invoicehead.customerTP.taxPayerName}}</td>
+        <td>{{ invoicehead.invoiceNumber}}</td>
+        <td>{{ invoicehead.invoiceIssueDate}}</td>
         <td>
-          <router-link :to="{ name: 'invoicehead-detail', params: { id: invoicehead.id }}">
+          <router-link :to="{ name: 'detail', params: { id: invoicehead.id }}">
             Részletek
           </router-link>
         </td>
       </tr>
+
       </tbody>
     </table>
   </div>
 </template>
-
-<script>
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      invoiceheads: []
-    };
-  },
-  created() {
-    this.fetchInvoiceHeads();
-  },
-  methods: {
-    fetchInvoiceHeads() {
-      axios.get('/api/invoiceheads')
-          .then(response => {
-            this.invoiceheads = response.data;
-          })
-          .catch(error => {
-            console.error("Error fetching invoice heads:", error);
-          });
-    }
-  }
-};
-</script>
 
 <style scoped>
 .table {

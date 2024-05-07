@@ -1,79 +1,82 @@
 // srv/router/index.js
 
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '@/views/HomeView.vue';
+import LoginView from "@/views/LoginView.vue";
+import RegisterView from "@/views/RegisterView.vue";
+import ContactView from "@/views/ContactView.vue";
+import InvoiceListView from "@/views/InvoiceListView.vue";
+import InvoiceDetailView from "@/views/InvoiceDetailView.vue";
+import InvoiceFormView from "@/views/InvoiceFormView.vue";
+import TaxpayerFormView from "@/views/TaxpayerFormView.vue";
+import TestView from "@/views/TestView.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+      //home
     {
-      path: '/',
       name: 'home',
+      path: '/',
       component: HomeView,
-      meta:{
-        title: "Főoldal"
-      }
+      meta:{  title: "Főoldal" }
     },
+      //login
     {
-      path: '/login',
       name: 'login',
-      component: ()=> import('@/views/LoginView.vue'),
-      meta:{
-        title: "Bejelentkezés"
-      }
+      path: '/login',
+      component: LoginView,
+      meta:{  title: "Bejelentkezés" }
     },
+      //register
     {
-      path: '/register',
       name: 'register',
-      component: ()=>import('@/views/RegisterView.vue'),
-      meta:{
-        title: "Regisztráció"
-      }
+      path: '/register',
+      component: RegisterView,
+      meta:{  title: "Regisztráció" }
     },
       //contact
     {
-      path: '/contact',
       name: 'contact',
-      component: ()=>import('@/views/ContactView.vue'),
-      meta:{
-        title: "Kapcsolat"
-      }
+      path: '/contact',
+      component: ContactView,
+      meta:{  title: "Kapcsolat" }
     },
-    //InvoiceListView
+     //InvoiceListView
     {
-      path: '/list',
       name: 'list',
-      component: ()=>import('@/views/InvoiceListView.vue'),
-      meta:{
-        title: "Számlalista"
-      }
+      path: '/list',
+      component: InvoiceListView,
+      meta:{  title: "Számlalista" }
     },
-    //InvoiceDetailView
+    //InvoiceDetailView (itemview)
     {
-      path: '/detail',
       name: 'detail',
-      component: ()=>import('@/views/InvoiceDetailView.vue'),
-      meta:{
-        title: "SzámlalRészletek"
-      }
+      path: '/detail',
+      component: InvoiceDetailView,
+      meta:{  title: "SzámlalRészletek" }
     },
     //InvoiceFormView
     {
-      path: '/letrehoz',
       name: 'letrehoz',
-      component: ()=>import('@/views/InvoiceFormView.vue'),
-      meta:{
-        title: "Új Számla létrehozása"
-      }
+      path: '/letrehoz',
+      component: InvoiceFormView,
+      meta:{  title: "Új Számla létrehozása" }
     },
     //TaxpayerFormView
     {
-      path: '/adozo',
       name: 'adozo',
-      component: ()=>import('@/views/TaxpayerFormView.vue'),
-      meta:{
-        title: "Új Partner létrehozása"
-      }
+      path: '/adozo',
+      component: TaxpayerFormView,
+      meta:{  title: "Új Partner létrehozása" }
+    },
+    //Test
+    {
+      name: 'test',
+      path: '/test',
+      component: TestView,
+      meta:{  title: "Tesztelés"}
     }
   ]
 })

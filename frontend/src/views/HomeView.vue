@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1 class="display-1">Főoldal</h1>
+  <h2 class="display-10">Főoldal</h2>
   <div class="w-75 mt-5 m-auto p-5 bg-success bg-opacity-25">
     <h2>Vizsgaremek    </h2>
     <br>

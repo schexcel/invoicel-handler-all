@@ -12,7 +12,7 @@ console.table(values)
 </script>
 
 <template>
-<h1 class="display-1">Bejelentkezés</h1>
+<h2 class="display-10">Bejelentkezés</h2>
   <div class="w-75 mt-5 m-auto p-5 bg-success bg-opacity-25">
     <VForm @submit="onSubmit">
       <div class="input-group">

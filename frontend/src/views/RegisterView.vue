@@ -21,7 +21,7 @@ function onSubmit(values) {
 </script>
 
 <template>
-  <h1 class="display-1">Regisztráció</h1>
+  <h2 class="display-10">Regisztráció</h2>
   <div class="w-75 mt-5 m-auto p-5 bg-warning bg-opacity-25">
     <VForm @submit="onSubmit" :validation-schema="schema">
       <div class="input-group">
