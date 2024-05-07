@@ -1,30 +1,3 @@
-## Project Setup
-
-```
-1. indíts egy parancssort, WIN+R, 'CMD', 'ENTER'
-2. csomagold ki a 'vizsgaremek_bsch.zip' \'backend' mappa tartalmát a 'c:\vizsgaremek_bsch\backend mappába'
-3. lépj be a 'c:\vizsgaremek_bsch\backend' mappába
-4. parancssorban add ki a 'npm install' parancsot (Ez legyártja a node modules mappát, telepíti a függőségeket)
-```
-
-### Compile and Hot-Reload for Development
-
-```
-1. indíts egy parancssort, WIN+R, 'CMD', 'ENTER'
-2. lépj be a 'c:\vizsgaremek_bsch\frontend mappába\'
-3. parancssorban add ki a 'npm run dev' parancsot.
-```
-
-### Check Browser
-```
-1. Nyisd meg kedvenc böngésződet
-2. Nyisd meg az alábbi URL-t: http://localhost:5173/
-```
-
-
-
-
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
