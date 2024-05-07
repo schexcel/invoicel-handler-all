@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\InvoiceHead;
+use App\Models\TaxNumber;
 use App\Models\TaxPayer;
 use App\Http\Requests\StoreTaxPayerRequest;
 use App\Http\Requests\UpdateTaxPayerRequest;
@@ -32,35 +33,49 @@ class TaxPayerController extends Controller
      */
     public function store(StoreTaxPayerRequest $request)
     {
-        //dd($request);
         $input = $request->validated();
 
-        $taxpayer = new TaxPayer();
-        $taxpayer->communityVatNumber = $input['communityVatNumber'];
-        $taxpayer->incorporation = $input['incorporation'];
-        $taxpayer->individualExemption = $input['individualExemption'];
-        $taxpayer->taxPayerVatStatus = $input['taxPayerVatStatus'];
-        $taxpayer->bankAccountNumber = $input['bankAccountNumber'];
-        $taxpayer->taxPayerName = $input['taxPayerName'];
-        $taxpayer->postalCode = $input['postalCode'];
-        $taxpayer->city = $input['city'];
-        $taxpayer->streetName = $input['streetName'];
-        $taxpayer->publicPlaceCategory = $input['publicPlaceCategory'];
-        $taxpayer->number = $input['number'];
-        $taxpayer->additionalAddressDetail = $input['additionalAddressDetail'];
-        $taxpayer->save();
-
-        //$taxpayer = TaxPayer::create($input);
-        //$taxpayer->fill(['' => '']);
-
-        //$taxpayer = TaxPayer::find(1);
-        $taxnumber = $taxpayer->taxNumber()->create([
+        $taxnumber = new TaxNumber([
             'taxpayerId' => $input['taxNumber->taxpayerId'],
             'vatCode' => $input['taxNumber->vatCode'],
             'countyCode' => $input['taxNumber->countyCode']
         ]);
-        $taxnumber->save();
-        $taxpayer->save();
+        if ($taxnumber->save())
+        {
+            $taxpayer = new TaxPayer([
+                'communityVatNumber' => $input['communityVatNumber'],
+                'incorporation' => $input['incorporation'],
+                'individualExemption' => $input['individualExemption'],
+                'taxPayerVatStatus' => $input['taxPayerVatStatus'],
+                'bankAccountNumber' => $input['bankAccountNumber'],
+                'taxPayerName' => $input['taxPayerName'],
+                'postalCode' => $input['postalCode'],
+                'city' => $input['city'],
+                'streetName' => $input['streetName'],
+                'publicPlaceCategory' => $input['publicPlaceCategory'],
+                'number' => $input['number'],
+                'additionalAddressDetail' => $input['additionalAddressDetail']
+            ]);
+            $taxpayer->taxNumber()->associate($taxnumber);
+
+            if ($taxpayer->save()) {
+                return view('taxpayer', [
+                    'taxpayer' => $taxpayer,
+                    'message' => "$taxpayer->taxPayerName nevű adózót sikeresen hozzáadtuk az adatbázishoz!",
+                    'display' => 'block'
+                ]);
+            }
+        }
+
+        return view('taxpayer_create', [
+            'taxpayer' => $taxpayer,
+            'message' => "$taxpayer->taxPayerName nevű adózót nem sikerült az adatbázishoz adni!",
+            'display' => 'block'
+        ]);
+
+        //$taxpayer = TaxPayer::create($input);
+        //$taxpayer->fill(['' => '']);
+        //$taxpayer = TaxPayer::find($taxpayer);
     }
 
     /**
